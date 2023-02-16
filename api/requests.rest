@@ -1,1 +1,22 @@
 GET http://localhost:3001/todos
+
+###
+
+POST http://localhost:3001/todo/new
+Content-Type: application/json
+
+
+{
+    "text": "Hello the bread"
+}
+
+###
+
+
+POST http://localhost:3001/todo/new
+Content-Type: application/json
+
+
+{
+    "text": "Hello the get some milk"
+}

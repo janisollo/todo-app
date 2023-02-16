@@ -47,5 +47,21 @@ app.post("/todo/new", (req, res) => {
   res.json(todo);
 });
 
+// app.delete("/todo/delete/id:", async (req, res) => {
+//   const result = await Todo.findByIdAndDelete(req.params.id);
+
+//   res.json(result);
+// });
+
+// Define a route to handle DELETE requests to the '/todo/delete/:id' endpoint
+
+app.delete("/todo/delete/:id", async (req, res) => {
+  const todo = await Todo.findByIdAndDelete(req.params.id);
+  if (!todo) {
+    return res.status(404).json({ error: "Todo not found" });
+  }
+  return res.json({ message: "Todo deleted successfully" });
+});
+
 // Start the server and listen for incoming requests
 app.listen(3001, () => console.log("Server started on port 3001"));

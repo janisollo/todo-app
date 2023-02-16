@@ -8,7 +8,7 @@ function App() {
         <div className="todo">
           <div className="checkbox"></div>
           <div className="text">Get the bread</div>
-          <div className="delete-todo">x</div>
+          <div className="delete-todo">x </div>
         </div>
       </div>
     </div>
